@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+
+body {
+
+    background: linear-gradient(to right, #0a426f, #1071e1);
+
+}
+
+.grid_container {
+
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(90px, auto) repeat(5, 100px);
+    justify-content: center;
+    align-content: center;
+
+    height: 100vh;
+
+}
+
+.grid_container button {
+
+    cursor: pointer;
+
+    font-size: 2em;
+
+    background: #111;
+    color: #ffffff;
+
+    border: 1px solid #111;
+
+    outline: none;
+
+}
+
+.grid_container button:hover {
+
+    background: #EEE;
+    color: #111;
+
+    transition: 0.2s ease-in;
+
+}
+
+.grid_container .span_two {
+
+    grid-column: span 2;
+
+}
+
+.grid_container .operator {
+
+    background: #d7d7d7;
+    color: #000;
+
+}
+
+.grid_container .output {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+
+    padding: 10px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    background: #222;
+
+    grid-column: 1 / -1;
+
+}
+
+.grid_container .output .previous_operand {
+
+    color: #ffffffbf;
+
+    font-size: 1.5em;
+
+}
+
+.grid_container .output .current_operand {
+
+   color: #FFF; 
+
+   font-size: 2.5em;
+    
+}
+
+/*! Media Screen Area */
+
+@media (max-width: 525px) {
+
+    .grid_container {
+
+        grid-template-columns: repeat(4, 90px);
+
+    }
+
+}
+
+@media (max-width: 388px) {
+
+    .grid_container {
+
+        grid-template-columns: repeat(4, 72px);
+
+    }
+
+}
